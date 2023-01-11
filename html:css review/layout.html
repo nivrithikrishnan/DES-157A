@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>HTML and CSS Refresher Challenges</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">HTML Basics</a></li>
+            <li><a href="cssbasics.html">CSS Basics</a></li>
+            <li><a href="layout.html">Page Layout</a></li>
+            <li><a href="responsive.html">Responsive Design</a></li>
+        </ul>
+    </nav>
+    <main>
+        <article>
+            <h2>Structure, Phrasing and Display</h2>
+            <p>Block elements are used to create larger structures, take up the full width avaliable and by default begin on new lines. Inline elements only take up as much width as necessary and do not start a new line by default.</p>
+            <p>The main different display properties in CSS include none, inline, block, and inline-block. Block and inline are defined above, affecting the indentation and width of an element. In addition there is inline-block where an element is formatted as an inline element but can have height and width values applied to it. Other key displays also include flex which places elements in a flex container, grid which places elements in a block-level grid container, and table. </p>
+        </article>
+        <article>
+            <h2>Box Model</h2>
+            <p>The CSS block model is essentially a box that wraps around each HTML element. From outside in, this includes the marin (gap before/outside an element), border (border around an element), padding (gap inside an element), and a specified width and height. The box-sizing property determines how the total width and height of an element is calculated, for example, whether they include the padding/borders or not. </p>
+            <img src="images/boxmodel.jpg" alt="Box Model" width="600" height="800">
+        </article>
+        <article class="background-image">
+            <h2>Background Images</h2>
+            <p>You can load an image using the image tag when it is part of the content rather than the design. This is used n most cases, like diagrams, logos, or headshots. A good guideline is when you expect people to print the page and you want the image to show up,or when you want it to be indexed by the search engine or has an essential semantic meaning. </p>
+        </article>
+    </main>
+    <footer>
+        <p>Page By Nivrithi Krishnan</p>
+        <p>HTML checked by Brooke and Laura</p>
+        <p><a href="https://validator.w3.org/check?uri=referer">Valid HTML</a></p>
+    </footer>
+</body>
+</html>
