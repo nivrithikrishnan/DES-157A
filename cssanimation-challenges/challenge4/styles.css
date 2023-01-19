@@ -91,31 +91,32 @@ header h1 {
 
  /* Add a rule to start the animation on hover */
  .cta:hover{
-   animation: shake 1s;
+   animation: shake 2s ease infinite;
  }
 
  /* Add an @keyframes rule */
+ /* 40% allows a pause between each animation (vs. 100%) */
  @keyframes shake {
    0% { 
-      transform: rotate(8deg);
+      transform: rotate(0);
    }
    15% { 
-      transform: rotate(-8deg);
+      transform: rotate(-15deg);
    }
    20% { 
-      transform: rotate(8deg);
+      transform: rotate(10deg);
    }
    25% { 
-      transform: rotate(-8deg);
+      transform: rotate(-10deg);
    }
    30% { 
-      transform: rotate(8deg);
+      transform: rotate(6deg);
    }
    35% { 
-      transform: rotate(-8deg);
+      transform: rotate(-4deg);
    }
    40% { 
-      transform: rotate(8deg);
+      transform: rotate(0);
    }
 
  }

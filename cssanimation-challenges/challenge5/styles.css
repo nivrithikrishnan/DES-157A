@@ -80,13 +80,13 @@ header h1 {
 /*Add a rule: When you hover over the card, you want the 
 BACK to rotate on the Y axis to 180 degrees */
 .card:hover .back{
-   transform: rotateY(180);
+   transform: rotateY(180deg);
 }
 
 /*Add a rule: When you hover over the card, you want the 
 FRONT to rotate on the Y axis to 0 degrees */
 .card:hover .front{
-   transform: rotateY(0);
+   transform: rotateY(0deg);
 }
 
 
