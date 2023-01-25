@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript and the DOM</h1>
+    <p id="one">Here is my first paragraph.</p>
+    <p class="blue">Here is my second paragraph</p>
+    <p>and another paragraph</p>
+    <p class="blue">and one more</p>
+    <p>last paragraph</p>
+    <br>
+
+    <div id="special">
+        <p class = "cheese"> Here is some text</p>
+        <p>Here is some more text</p>
+    </div>
+
+    <script>
+        // document.getElementById("one").style.color='red'; 
+        // var myText = document.getElementsByTagName('p');
+        // console.log(myText[0]);
+
+        // for (var i = 0; i < myText.length; i++){
+        //     myText[i].style.color = "red"; 
+        //     alert(`This is element ${i}`); 
+        // }
+
+        // var myText = document.getElementsByClassName("blue"); 
+        // for (var i = 0; i < myText.length; i++){
+        //     myText[i].style.color = "blue"; 
+        //     alert(`This is element ${i}`); 
+        // }
+
+        // var myText = document.querySelector('#special .something');
+        // myText.style.fontSize = '24px'; 
+
+        // var myText = document.querySelectorAll('#special .something');
+        // console.log(myText[1]); 
+
+        // var myDiv = document.getElementById('special');
+        // myDiv.innerHTML = "<p>I love cheese! </p>";
+
+        // var firstParagraph = document.querySelector('p'); 
+        // firstParagraph.className = "blue"; 
+
+        var myParagraph = document.createEleent('p'); 
+        var mySentence = document.createTextNode("Here is a sentence"); 
+        myParagraph.appendChild(mySentence); 
+        document.querySelector('div').appendChild(myParagraph); 
+
+    </script>
+</body>
+</html>
