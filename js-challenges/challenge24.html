@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Event Challenges: Challenge 24</title>
+</head>
+
+<body>
+	<h1>JavaScript Event Challenges: Challenge 24</h1>
+	<div class = "content">
+		<p>Here is a paragraph of text</p>
+	</div>
+	<button>Add a paragraph</button>
+
+	<script>
+		var content = document.querySelector('div');
+		var button = document.querySelector('button');
+
+		button.addEventListener('click', function(){
+			var new_par = document.createElement('p'); 
+			new_par.appendChild(document.createTextNode('Here is another paragraph')); 
+
+			content.appendChild(new_par); 
+		}); 
+	</script>
+</body>
+</html>
