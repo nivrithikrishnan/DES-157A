@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples</title>
+</head>
+<body>
+    <h1>First Event</h1>
+    <button>Don't Click Me</button>
+    <script>
+        var bttn = document.querySelector('button');
+
+        //example: named function
+        // function ouch(){
+        //     alert("Oh no you didn't!"); 
+        // }
+        // bttn.onclick = ouch; 
+
+        //example: anonymous function 
+        // bttn.onclick = function() {
+        //     alert("Oh no you didn't!"); 
+        // }
+
+        //example: named function w/ event listener 
+        // function ouch(){
+        //     alert("Oh no you didn't!"); 
+        // }
+        // bttn.addEventListener('click', ouch);
+
+        //BEST PRACTICE
+        //example: anonymous function w/ event listener
+        // bttn.addEventListener('click', function(){
+        //     alert("Oh no you didn't!"); 
+        // }); 
+
+        //arrow function
+        // bttn.addEventListener('click', () => {
+        //     alert("Oh no you didn't!"); 
+        // }); 
+
+        bttn.addEventListener('click', function(event){
+            event.target.style.backgroundColor = "red"; 
+            alert("Oh no you didn't!"); 
+        }); 
+
+    </script>
+</body>
+</html>
