@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JavaScript Event Challenges: Challenge 27</title>
+	<script src="script27.js" defer></script>
 </head>
 
 <body>
@@ -11,19 +12,5 @@
 		<label>Enter a number: <input type="text"></label>
 		<input type="submit" value="Send number">
 	</form>
-
-	<script>
-		var heading1 = document.querySelector('h1'); 
-		document.querySelector('form').addEventListener('submit', function(e){
-			e.preventDefault(); 
-
-			var num = parseInt(document.querySelector('input').value); 
-			if (num){
-				heading1.style.fontSize = num + "px"; 
-			} else {
-				alert('Please enter a number.');
-			}
-		});
-	</script>
 </body>
 </html>

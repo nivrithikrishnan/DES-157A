@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JavaScript Event Challenges: Challenge 29</title>
+	<script src="script29.js" defer></script>
 	<style>
 		body {height: 3000px;}
 		.one {background-color: beige; transition: all 3s;}
@@ -17,27 +18,4 @@
 	<h1>JavaScript Event Challenges: Challenge 29</h1>
 	<p>Scroll Down!</p>
 </body>
-
-<script>
-	var content = document.querySelector('body');
-
-	window.addEventListener('scroll', function(){
-		switch(true){
-			case (window.pageYOffset < 500):
-				content.className="one";
-				break; 
-			case (window.pageYOffset < 1000):
-				content.className="two";
-				break;
-			case (window.pageYOffset < 1500):
-				content.className="three";
-				break;
-			case (window.pageYOffset < 2000):
-				content.className="four";
-				break;
-			default: 
-				content.className="five"; 
-		}
-	});
-</script>
 </html>

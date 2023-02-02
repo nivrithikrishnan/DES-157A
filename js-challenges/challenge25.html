@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JavaScript Event Challenges: Challenge 25</title>
+	<script src="script25.js" defer></script>
 </head>
 
 <body>
@@ -12,23 +13,5 @@
 	</div>
 	<button>Add a paragraph</button>
 	<button>Remove a paragraph</button>
-
-	<script>
-		var content = document.querySelector('div');
-		var buttonAdd = document.querySelectorAll('button')[0];
-		var buttonRemove = document.querySelectorAll('button')[1];
-
-		buttonAdd.addEventListener('click', function(){
-			var new_par = document.createElement('p'); 
-			new_par.appendChild(document.createTextNode('Here is another paragraph')); 
-
-			content.appendChild(new_par); 
-		}); 
-
-		buttonRemove.addEventListener('click', function(){
-			var allP = document.querySelectorAll('p'); 
-			content.removeChild(content.children[allP.length-1]) 
-		}); 
-	</script>
 </body>
 </html>

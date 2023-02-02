@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JavaScript Event Challenges: Challenge 28</title>
+	<script src="script28.js" defer></script>
 	<style>
 		div {
 			width: 50px; 
@@ -24,17 +25,5 @@
 <body>
 	<h1>JavaScript Event Challenges: Challenge 28</h1>
 	<div></div>
-
-	<script>
-		var content = document.querySelector('div');
-
-		content.addEventListener('mouseover', function(){
-			content.className = "big"; 
-		});
-		content.addEventListener('mouseout', function(){
-			// content.className = ""; 
-			content.removeAttribute('class');
-		});
-	</script>
 </body>
 </html>

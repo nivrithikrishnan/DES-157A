@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JavaScript Event Challenges: Challenge 30</title>
+	<script src="script30.js" defer></script>
 	<style>
 		body {height: 3000px;}
 		.one {background-color: beige; transition: all 3s;}
@@ -21,31 +22,4 @@
 	<p>Press the 'f' key to turn the page cornflowerblue</p>
 	<p>Press the 'g' key to turn the page darkgoldenrod</p>
 </body>
-
-<script>
-	var content = document.querySelector('body');
-
-	document.addEventListener('keydown', function(e){
-		var keyPressed = e.key; 
-		switch(keyPressed){
-			case ('b'):
-				content.className="one";
-				break; 
-			case ('v'):
-				content.className="two";
-				break;
-			case ('c'):
-				content.className="three";
-				break;
-			case ('f'):
-				content.className="four";
-				break;
-			case ('g'):
-				content.className="five";
-				break;
-			default: 
-				alert("You didn't press one of the specified keys."); 
-		}
-	});
-</script>
 </html>
