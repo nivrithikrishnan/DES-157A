@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Position</title>
+    <style>
+        body {
+            padding: 0;
+            cursor: none;
+        }
+
+        img {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Example</h1>
+    <p></p>
+    <img src="images/img.jpg" alt="Big Ben" width="60" height="80">
+    <script>
+        /*
+            Variable Declarations
+            html: set to be an empty string, will display the image position
+            myImage: holds reference to the image
+        */
+        let html = ""; 
+        let myImage = document.querySelector('img');
+        /*Adds an event listener so every time the mouse moves, the function 'moveImg' is called*/
+        document.addEventListener('mousemove', moveImg);
+
+        function moveImg(event) {
+            /*
+                Variable Declarations
+                p: holds reference to the paragraph element
+                xPos: value of mouse's current x position
+                yPos: value of mouse's current y position
+            */
+            const p = document.querySelector('p'); 
+            const xPos = event.clientX;  //v
+            const yPos = event.clientY; 
+
+            /*Sets the innerHTML (value of p) to be html (empty by default)*/
+            p.innerHTML = html;
+
+            /*Sets the image to the x and y location of the mouse*/
+            myImage.style.left = event.clientX +'px';
+            myImage.style.top = event.clientY +'px';
+
+            /*Sets the value of the paragraph element to display the position of the image in relation to the top left corner*/
+            html = `Current Position: ${xPos} pixels from the left and ${yPos} pixels from the top`;
+        }
+    </script>
+</body>
+
+</html>
