@@ -1,0 +1,57 @@
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: Arial;
+    background: #ccc;
+    padding: 0;
+    margin: 0;
+}
+
+#bgimage {
+    width: 100%;
+    aspect-ratio: 2/1;
+    /*Load a small image by default for small screens*/
+    background: url(images/pie01a.jpg);
+    background-size: cover;
+}
+
+#main{
+    margin: auto;
+    width: 960px;
+    padding: 20px;
+    background: #fff;
+}
+
+p {
+    line-height: 1.4em;
+    margin-bottom: 1em;
+}
+
+/* These media queries will kick in as the screen size increases */
+
+
+@media only screen and (min-width: 600px) {
+    body{
+        background-color: bisque;
+    }
+    
+    #bgimage { background: url(images/pie01b.jpg); background-size: cover;}
+    
+}
+
+@media only screen and (min-width: 1300px) {
+    
+    #bgimage { background: url(images/pie01c.jpg); background-size: cover;}
+    
+}
+
+@media only screen and (min-width: 2000px) {
+    
+    #bgimage { background: url(images/pie01.jpg); background-size: cover;}
+    
+}

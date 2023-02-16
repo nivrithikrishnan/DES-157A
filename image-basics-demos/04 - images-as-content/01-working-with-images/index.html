@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Images &amp; Image Manipulation in HTML, CSS &amp; JavaScript</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=IBM+Plex+Sans:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<h1>Images as Content</h1>
+	</header>
+	<section>
+		<p>One thing that often causes styling problems is that images on your page through either the <code>&lt;img&gt;</code> tag or the <code>&lt;picture&gt;</code> tag are, by default, inline, or phrasing content. This is because images are content, just like words are content, and it is possible that you might have some content that starts as words, then includes an image, then has more words, and the image would be inline with the words.</p>
+
+		<p>Usually we don't think of using images in this way. We think of them as blocks on the page, and we want to style them that way. However, there are times when we do use images as content, for example, think of the use of emojis &#x1f4a9; within content.</p>
+
+		<p>The fact that images display as inline elements sometimes causes styling problems that can drive designers nuts.</p>
+		<div class="layout">
+			<div class="inline-example">
+				<img src="images/orange-tree1.jpg" alt="orange tree">
+				<p> Notice that there is a gap between the tree and the background color for this paragraph!</p>
+			</div>
+
+			<div class="inline-example">
+				<img src="images/orange-tree2.jpg" alt="orange tree" class="block">
+				<p> Notice that there is no gap between the tree and the background color for this paragraph!</p>
+			</div>
+		</div>
+
+		<p>In the examples above, why is there a gap under the image on the left? That image is an inline element, and <em>the gap is caused by the rest of the line</em>. The image on the right is set to <code>display: block;</code> and now behaves like a block element.</p>
+
+		<p>Frequently it is helpful to add <code>img { display: block; }</code> as a reset rule at the top of your stylesheet to make all images on the page display as block elements by default.</p>
+		
+		<h2>Images Overrunning Containers</h2>
+		
+		<p>If you have a container on your page, such as an <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code> or <code>&lt;div&gt;</code> with an <code>&lt;img&gt;</code> inside it, and the container is set to a specific width, and the image size is greater than that width, it will break out of that container.</p>
+		
+		<div id="no-overflow">
+			<img src="images/dogs.jpg" alt="two dogs">
+		</div>
+		<div id="overflow">
+			<img src="images/dogs.jpg" alt="two dogs">
+		</div>
+		<div id="contained">
+			<img src="images/dogs.jpg" alt="two dogs">
+		</div>
+
+		<p>One way to deal with this is through CSS by adding to the reset rule on images, so that it contains two declarations:</p>
+
+		<p><code>img { display: block; max-width: 100%; }</code></p>
+
+		<p>Note that when you do this, it is easy to forget that loading an image that is larger than the container, and potentially larger than what the user needs can be downloaded and displayed, causes unnecessary bandwidth costs and slows down the page load. More on performance shortly.</p>
+
+		<p>Another way of dealing with images overrunning their containers is to set overflow: hidden on the container. That way, any portion of the image, or any other content that does not fit in the container will be hidden from view. This can provide interesting opportunities for interaction design, as you can control what is seen, and what is not seen within a container.</p>
+
+		<p>Notice the top image in this example bust out of its container. However, the second one does not. The second div has <code>overflow: hidden;</code>. The padding and pink background color were added to show what's going on even more explictly.</p>
+
+		<p>Notice the third example is set to <code>display:block</code> and <code>max-width: 100%</code>, but the image is displayed small than the file actually is.</p>
+
+		</section>
+</body>
+</html>

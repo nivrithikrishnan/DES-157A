@@ -1,0 +1,54 @@
+body {
+	background-image: url(images/idaho-sunrise.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	
+	/* The declaration below makes the whole image
+	fit across the body of the page */
+	background-size: contain;
+	
+	/* Set the padding on top to the percentage of the 
+	height of the image in proportion to the width of 
+	the image. */
+	padding-top: 33.6%;
+}
+
+section {
+	background: #fff;
+	padding-top: 30px;
+}
+
+article {
+	margin: auto;
+	width: 75%;
+	font-family: Arial;
+	font-size: 24px;
+	color: #666;
+	line-height: 1.5em;
+}
+
+.alignright {
+	display: block;
+	float: right;
+	padding-left: 15px;
+	max-width: 50%;
+}
+
+div p {
+	color: #ccc;
+}
+
+footer {
+	background: #333;
+	padding: 50px 0;
+	text-align: center;
+	font-family: Arial;
+	color:#fff;
+}
+
+footer a {
+	color: #FFADF2;
+	font-weight: bold;
+	text-decoration: none;
+}

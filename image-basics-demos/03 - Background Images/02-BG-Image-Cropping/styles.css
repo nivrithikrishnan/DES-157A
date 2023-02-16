@@ -1,0 +1,46 @@
+body {
+	background-image: url(images/idaho-sunrise.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	padding-top: 671px;
+}
+
+section {
+	background: #fff;
+	padding-top: 30px;
+}
+
+article {
+	margin: auto;
+	width: 75%;
+	font-family: Arial;
+	font-size: 24px;
+	color: #666;
+	line-height: 1.5em;
+}
+
+div p {
+	color: #ccc;
+}
+
+.alignright {
+	display: block;
+	float: right;
+	padding-left: 15px;
+	max-width: 50%;
+}
+
+footer {
+	background: #333;
+	padding: 50px 0;
+	text-align: center;
+	font-family: Arial;
+	color:#fff;
+}
+
+footer a {
+	color: #FFADF2;
+	font-weight: bold;
+	text-decoration: none;
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Images &amp; Image Manipulation in HTML, CSS &amp; JavaScript</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=IBM+Plex+Sans:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<h1>Background Images Example 3</h1>
+	</header>
+	<section>
+		<div class="layout">
+			<img src="images/cat-square.jpg" alt="Purrcee" width="202" height="202">
+			<div id="bgimg"></div>
+		</div>
+
+		<p>Looking at the two images above with your eyes, you can't really tell the difference between the two. But the first is content on the page, provided by the <code>&lt;img&gt;</code> tag with a src attribute. The second is the &quot;decoration&quot; of a <code>&lt;div&gt;</code> element, with the image loading through CSS as a background declaration.</p>
+
+		<p>The image loaded through the <code>&lt;img&gt;</code> tag will be indexed by Google, its alt attribute will be read by screen readers, etc. The image loaded through CSS will not be indexed, as it is not content on the page.</p>
+
+		<h2>Swapping Images on :hover</h2>
+
+		<p>Through CSS you can easily swap an image in the background of an element by adding a :hover pseudo class rule. See the example below.</p>
+		
+		<div id="css-hover-example"></div>
+		<img src="images/code.png" alt="CSS code">
+	
+		
+
+		<p>Just beware that :hover won't work properly on mobile devices. It might work in some circumsances, but it might be glitchy. To make it work properly you will need JavaScript to capture mouseOver and touch events separately.</p>
+	</section>
+</body>
+</html>

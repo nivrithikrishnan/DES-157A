@@ -1,0 +1,70 @@
+body {
+    font-family: Arial;
+    line-height: 1.5em;
+    color: #333;
+}
+
+header, footer {
+    background-color: #166237;
+    padding: 40px 0;
+    text-align: center;
+    color: #fff;
+}
+
+header, footer, main {
+    max-width: 1020px;
+    margin: auto;
+}
+
+/* Add image rule here! */
+/* img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+} */
+
+.card {
+    box-sizing: border-box;
+    border:8px solid #44690d;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cta {
+    display: block;
+    text-decoration: none;
+    background-color: #ff6d6d;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #b92222;
+    border-radius: 10px;
+    margin: 30px auto 0 auto;
+    width: 150px;
+}
+
+footer {
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    line-height: normal;
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .card {
+        width: calc(50% - 10px);
+        margin-bottom: 0;
+    }
+}

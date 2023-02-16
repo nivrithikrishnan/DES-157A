@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Background Image 2</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+	
+	<section id="content">
+		
+		<article>
+		<h1>Background Image 2</h1>
+		<h2>Fixed Header Hero Image - With Resizing / No Cropping</h2>
+			
+		<p>On this example, as in the first example, you will notice that the content starts below the header image and scrolls on top of it. But this time, as you resize the browser window, the image at the top of the page resizes with the browser window and is NOT cropped. Also, you no longer have to be concerned that image will never go all the way to the edges of the browser window (unless you add padding to the left and right of the body element). However, it would still be advisible to use media queries to load proper sized images for different browser sizes.</p>
+		
+		<p><img src="images/bodyrule.png" alt="body rule css image" class="alignright">The magic that makes all this work, is found in two declarations in the body rule. The background-size declaration set to contain will make sure that the whole picture is displayed, no matter what. The second declaration that is important is the padding-top, which is set to a percentage. This percentage represents the proportion of the hight of the image to the width of the image.</p>
+			
+		<p>To find the correct percentage of height to width you could do the math ( height/width = x/100, cross multiply and divide to get the percentage. Or you can open the image in Photoshop and set the width to 100px to see what the height gets set to. That number will be your percentage.</p>
+		
+		<div class="lorem">
+		<p>Lorem ipsum dolor amet actually VHS la croix snackwave chia chambray sriracha. Kogi YOLO fashion axe sustainable snackwave wolf man braid gluten-free meh la croix salvia green juice cold-pressed paleo bitters. Af air plant shaman, cloud bread tilde +1 food truck banjo selvage venmo post-ironic tacos pabst YOLO. Williamsburg woke shabby chic, lyft kale chips air plant bicycle rights before they sold out taxidermy humblebrag twee roof party. Waistcoat lo-fi direct trade wolf tilde chambray taxidermy skateboard fixie. Pork belly literally pour-over butcher cred everyday carry waistcoat hammock. Kale chips microdosing heirloom pinterest kickstarter.</p>
+
+		<p>Kale chips YOLO vegan snackwave. Enamel pin mlkshk selfies, pop-up celiac tofu narwhal dreamcatcher wolf drinking vinegar brunch palo santo sriracha. Hashtag blue bottle beard glossier. Paleo affogato craft beer iceland XOXO vexillologist post-ironic. Cronut meggings cloud bread, palo santo occupy subway tile cold-pressed kale chips plaid.</p>
+
+		<p>Slow-carb fashion axe organic, poke kale chips yuccie vexillologist tilde man braid. Edison bulb church-key heirloom forage fashion axe. Shaman dreamcatcher palo santo art party flexitarian trust fund bitters ennui seitan lomo raw denim gochujang. Tacos kickstarter chartreuse butcher green juice craft beer gluten-free vice. Taiyaki normcore prism 3 wolf moon, scenester occupy raw denim mumblecore tacos craft beer skateboard typewriter brunch lyft waistcoat. Tumeric vinyl fingerstache hoodie, woke cliche ugh hot chicken readymade normcore waistcoat single-origin coffee VHS small batch.</p>
+
+		<p>Hella stumptown mixtape synth. Enamel pin iPhone aesthetic shaman. Semiotics vape blue bottle farm-to-table vegan gluten-free, yuccie knausgaard keffiyeh tofu distillery direct trade tousled slow-carb next level. Meh cloud bread viral, ugh biodiesel coloring book occupy sustainable retro.</p>
+
+		<p>Adaptogen fingerstache pinterest XOXO godard affogato cardigan microdosing snackwave waistcoat pitchfork lomo cloud bread ramps iceland. Deep v man braid ethical, bespoke four dollar toast XOXO shaman jean shorts wayfarers chia meditation irony art party post-ironic. Pok pok venmo shaman thundercats DIY tofu. Jianbing readymade mixtape man bun. Sriracha put a bird on it fixie trust fund, plaid vape gastropub next level austin lomo helvetica taiyaki shaman swag meh. Authentic lumbersexual edison bulb freegan coloring book ennui photo booth actually readymade chicharrones. Kombucha raclette schlitz enamel pin helvetica.</p>
+
+		<p>Oh. You need a little dummy text for your mockup? How quaint.</p>
+
+		<p>I bet you’re still using Bootstrap too…</p>
+			
+		</div>
+		
+		</article>
+		
+	</section>
+	
+	<footer>
+		<p>Parallax Example 2 by Bill Mead - <a href="http://mead.design">Mead.Design</a></p>
+	</footer>
+	
+</body>
+	
+</html>

@@ -1,0 +1,92 @@
+body {
+	font-family: 'IBM Plex Sans', sans-serif;
+	color: #333;
+	line-height: 1.5em;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, strong {
+	font-weight: 500;
+}
+
+li {
+	margin-bottom: 1em;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 500;
+	color:#1F5197;
+}
+
+code {
+	font-family: 'IBM Plex Mono', monospace;
+	color: #000000;
+	background: #EDF8FF;
+	padding: 5px;
+}
+
+header {
+	text-align: center;
+}
+
+section {
+	max-width: 650px;
+	margin: auto;
+}
+
+.layout {
+	display: flex;
+	justify-content: space-around;
+}
+
+#bgimg {
+	width: 202px;
+	height: 202px;
+	background: url("images/cat-square.jpg") no-repeat;
+}
+
+#css-hover-example {
+	width:400px;
+	height: 400px;
+	background-image: url("images/orange-tree1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom: 20px;
+}
+
+#css-hover-example:hover {
+	background-image: url("images/orange-tree2.jpg");
+}
+
+.inline-example {
+	width: 200px;
+}
+
+.inline-example p {
+	background-color: #492E17;
+	color: #fff;
+	padding: 20px;
+	margin: 0;
+}
+
+.block { display: block; }
+
+#no-overflow, #overflow, #contained {
+	width: 350px;
+	padding: 10px;
+	background-color: #E200FF;
+	margin-bottom: 20px;
+}
+
+#overflow {
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}

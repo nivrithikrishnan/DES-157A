@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- necessary for mobile browsers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Images - Srcset</title>
+
+    <!-- Normalize CSS for browser consistency -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- My styles load last! -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Responsive Images - Srcset</h1>
+        <p>Different images for different sized screens!</p>
+
+        <img src="images/surfer-320.jpg" 
+            srcset="images/surfer-320.jpg 320w,
+                    images/surfer-925.jpg 925w,
+                    images/surfer-1200.jpg 1200w"
+            sizes="(max-width: 1020px) 100vw, 1020px"
+        alt="Surfer"> 
+    </header>
+    <main>
+        <article class="card">
+            <h2>Card Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ex possimus perferendis culpa est ab nemo. Eius consequatur nemo eaque nesciunt accusantium quod reprehenderit sapiente ullam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ea aliquam quod omnis nihil corrupti dolorum saepe nam laborum cum explicabo facilis porro dignissimos.</p>
+            <a href="#" class="cta">Call To Action</a>
+        </article>
+        <article class="card">
+            <h2>Card Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam optio nulla ut illum unde, ducimus aperiam, mollitia ipsum exercitationem, error ab praesentium. Officia, accusantium fugiat?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur aliquam doloremque fugiat sequi alias explicabo nam consequatur rem eligendi at.</p>
+            
+            <a href="#" class="cta">Call To Action</a>
+        </article>
+
+        <article class="card">
+            <h2>Card Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ex possimus perferendis culpa est ab nemo. Eius consequatur nemo eaque nesciunt accusantium quod reprehenderit sapiente ullam! Cupiditate vero modi officia!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ea aliquam quod omnis nihil corrupti dolorum saepe nam laborum cum explicabo facilis porro dignissimos</p>
+            <a href="#" class="cta">Call To Action</a>
+        </article>
+        <article class="card">
+            <h2>Card Title</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur aliquam doloremque fugiat sequi alias explicabo nam consequatur rem eligendi at.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos labore rerum corrupti alias fuga, dolores numquam enim. Aliquam magnam maiores molestias, quam ducimus quia corporis!</p>
+            <a href="#" class="cta">Call To Action</a>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; copyright information in the footer.</p>
+    </footer>
+</body>
+</html>
