@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quaffle 3</title>
+</head>
+
+<body>
+    <h1>Quaffle 3</h1>
+    <p>Find three errors!</p>
+
+    <div>
+        <h2>Voldemort attacks Harry, which counter spell should he use?</h2>
+        <button>Expelliarmus</button>
+        <button>Mobilicorpus</button>
+        <button>Impedimenta</button>
+        <button>Petrificus Totalus</button>
+        <p>Click a button to choose a spell</p>
+    </div>
+
+    <script>
+        (function () {
+            'use strict';
+            const bttns = document.querySelectorAll("button");
+            const battle = document.querySelector("div p");
+            const voldeSpells = ["Avada Kedavra", "Crucio", "Confringo", "Sectumsempra", "Fiendfyre"];
+
+            function voldemortAttack() {
+                const attack = voldeSpells[Math.floor(Math.random() * 5)];
+                return attack;
+            }
+
+            for (const eachBtn of bttns) {
+
+                eachBtn.addEventListener("click", function (event) {
+                    const spell = event.target.innerHTML;
+                    const attack = voldemortAttack();
+                    const HarrySpellPower = Math.ceil(Math.random() * 10);
+                    const voldemortSpellPower = Math.ceil(Math.random() * 10);
+                    battle.innerHTML = `You chose ${spell} and Voldemort used ${attack}`;
+
+                    if (HarrySpellPower > voldemortSpellPower) {
+                        battle.innerHTML += "<br> Harry Potter Wins!";
+                    }
+                    else if (HarrySpellPower < voldemortSpellPower) {
+                        battle.innerHTML += "<br> Voldemort overpowered Harry!";
+                    }
+                    else {
+                        battle.innerHTML += "<br> It was a tie!";
+                    }
+                });
+            }
+
+        })();
+
+    </script>
+
+</body>
+
+</html>
