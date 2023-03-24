@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+    <!--/ /-------- stylesheets --------/ /-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body style="transition: all 2s;">
+    <h1>Experiment 2</h1>
+    <br><br>
+    <h1 style = "text-align:center;
+                background-color: black; 
+                margin: 2% -11%; 
+                padding: 1%;">
+                
+    Select a color: </h1>
+
+    <div class="form" style="text-align:center">
+        <label for="colors"></label>
+        <select name="colors" id="colors">
+
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="orange">Orange</option>
+        <option value="purple">Purple</option>
+    </select>
+    </div>
+
+    <script>
+        const values = new Map();
+        values.set('red', "#EF270C");
+        values.set('blue', "#45C0D0");
+        values.set('yellow', "#FFAD22");
+        values.set('green', "#90A13C");
+        values.set('orange', "#E15F12");
+        values.set('purple', "#786DA7");
+
+        var choice = colors.selectedIndex;
+        console.log(choice);
+
+        document.getElementsByTagName('select')[0].onchange = function() {
+            var choice = this.value;
+            var color = values.get(choice); 
+            
+            document.body.style.backgroundColor = "" + values.get(choice);
+            console.log(color);
+        }
+    </script>
+</body>
+</html>
+

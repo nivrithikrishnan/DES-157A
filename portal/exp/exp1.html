@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+    <!--/ /-------- stylesheets --------/ /-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h1>right click -> inspect -> console</h1>
+
+    <script>
+        /*prints a triangle of base length 'length'*/
+        // var length = 7; 
+        // var output = ""; 
+        // for (var i = 0; i <= length; i++){
+        //     for (var z = 0; z < i; z++){
+        //         output += "#";  
+        //     }
+        //     output += '\n'; 
+        // }
+        // console.log(output); 
+        // 
+
+        /* attempt #1 */
+        // var length = 5; 
+        // var output = ""; 
+ 
+        // /*top half*/
+        // for (var i = 0; i <= length; i++){
+        //     var spaces = length - i; 
+        //     var num = i*2+1; 
+        //     for (var z = 0; z < spaces; z++){
+        //         output += " "; 
+        //     }
+        //     for (var z = 0; z < num; z++){
+        //         output += "#"; 
+        //     }
+        //     output += '\n'; 
+        // }
+        // /*bottom half*/
+        // for (var i = length; i >=0; i--){
+        //     var spaces = length - i; 
+        //     for (var z = 0; z < spaces; z++){
+        //         output += " "; 
+        //     }
+        //     for (var z = 0; z < i*2+1; z++){
+        //         output += "#"; 
+        //     }
+        //     output += '\n'; 
+        // }
+
+        /*attempt #2: using an array*/
+        // var height = 7;
+        // var output = []
+ 
+        // for (var i = height-1; i >= 0; i--){
+        //     var current = ""
+
+        //     //creates center row
+        //     if (i == height-1){
+        //         for (var z = 0; z < i*2+1; z++){
+        //             current += "#"; 
+        //         }
+        //     //creates the rest starting from the center + movng outwards
+        //     } else {
+        //         var spaces = height - i - 1; 
+        //         var num = i*2+1;
+
+        //         for (var z = 0; z < spaces; z++){
+        //             current += " "; 
+        //         }
+        //         for (var z = 0; z < num; z++){
+        //             current += "#"; 
+        //         }
+        //         output.unshift(current);
+        //     }
+        //     output.push(current);
+        // }
+
+        /* prints a triangle of height (2 * 'height') */
+        function diamond (height=7){
+            var output = [];
+            var current = "";
+
+            //creates center row
+            for (var z = 0; z < height*2-1; z++){
+                current += "#"; 
+            }
+            output.push(current);
+
+            //creates rest of diamond (working inside out)
+            for (var spaces = 1; spaces < height; spaces++){
+                current = "";
+                for (var z = 0; z < spaces; z++){
+                    current += " "; 
+                }
+
+                var num = (2*height)-(2*spaces)-1;
+                for (var z = 0; z < num; z++){
+                    current += "#"; 
+                }
+                output.unshift(current);
+                output.push(current);
+            } 
+
+            //prints array
+            printArray(output);
+        }
+
+        function printArray(arr){
+            output = ""; 
+            for (var i = 0; i < arr.length; i++){
+                output += arr[i] + "\n"; 
+            }
+            console.log(output); 
+        }
+
+        diamond(7);
+
+        /* 
+        6 6 1
+        5 5 2
+        4 4 3
+        3 3 4
+        2 2 5
+        1 1 6
+        0 0 7
+
+        height = 7
+        height - i = spaces
+        height - spaces = i 
+        */ 
+
+        //recursion
+    </script>
+</body>
+</html>
+

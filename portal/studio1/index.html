@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--/ /-------- fonts --------/ /-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--/ /-------- stylesheets --------/ /-->
+    <script src="script.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Mad Libs</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h1>Mad Libs 2.0</h1>
+        <!-- <div id="container-main">
+            <h2>Prompt</h2>
+            <p id="text-input">input text</p>
+            <button id="button-next">Next</button>
+        </div> -->
+
+        <form id="theform" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name"> <br>
+
+            <label for="cname">Company Name</label>
+            <input type="text" name="cname" id="cname"> <br>
+
+            <label for="jtitle">Job Title</label>
+            <input type="text" name="jtitle" id="jtitle"> <br>
+
+            <label for="skill">Skill</label>
+            <input type="text" name="skill" id="skill"> <br>
+
+            <label for="num">Number</label>
+            <input type="number" name="num" id="num"> <br>
+    
+            <label for="result">Result</label>
+            <select id="result">
+                <option value="Random">Random</option>
+                <option value="Accept">Accept</option>
+                <option value="Reject">Reject</option>
+            </select> <br>
+            <input id="submit-button" type="submit" value="Send">
+        </form>
+        <article id="madlib"></article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
